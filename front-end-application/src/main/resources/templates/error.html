@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <link rel="stylesheet" type="text/css" th:href="@{~/css/bootstrap.min.css}" />
+
+    <link rel="stylesheet" type="text/css" th:href="@{~/css/style.default.css}" />
+
+</head>
+
+<body marginwidth="0" marginheight="0">
+
+<div class="container">
+
+    <div class="row">
+
+        <h1>Oops! Sorry!</h1>
+
+    </div>
+
+    <div class="row">
+        <p>It seems like we couldn't process your request this time.</p>
+        <p>Please verify if the input is correct: a real city name or if the coordinates are in the format 'lat,lon' (ex: 35.2,140.3)</p>
+    </div>
+
+    <div class="row rowDesign">
+
+        <div class="col-md-4 ml-auto">
+
+            <span class="legend">Date</span>
+
+        </div>
+
+        <div class="col-md-8">
+
+            <span th:text="${timestamp}"></span>
+
+        </div>
+
+    </div>
+
+    <div class="row rowDesign">
+
+        <div class="col-md-4 ml-auto">
+
+            <span class="legend">Path</span>
+
+        </div>
+
+        <div class="col-md-8">
+
+            <span th:text="${path}"></span>
+
+        </div>
+
+    </div>
+
+    <div class="row rowDesign">
+
+        <div class="col-md-4 ml-auto">
+
+            <span class="legend">Error</span>
+
+        </div>
+
+        <div class="col-md-8">
+
+            <span th:text="${error}"></span>
+
+        </div>
+
+    </div>
+
+    <div class="row rowDesign">
+
+        <div class="col-md-4 ml-auto">
+
+            <span class="legend">Status</span>
+
+        </div>
+
+        <div class="col-md-8">
+
+            <span th:text="${status}"></span>
+
+        </div>
+
+    </div>
+
+    <div class="row rowDesign">
+
+        <div class="col-md-4 ml-auto">
+
+            <span class="legend">Message</span>
+
+        </div>
+
+        <div class="col-md-8">
+
+            <span th:text="${message}"></span>
+
+        </div>
+
+    </div>
+
+    <div class="row rowDesign">
+
+        <div class="col-md-4 ml-auto">
+
+            <span class="legend">Exception</span>
+
+        </div>
+
+        <div class="col-md-8">
+
+            <span th:text="${exception}"></span>
+
+        </div>
+
+    </div>
+
+    <div class="row rowDesign">
+
+        <div class="col-md-4 ml-auto">
+
+            <span class="legend">Trace</span>
+
+        </div>
+
+        <div class="col-md-8">
+
+            <span th:text="${trace}"></span>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
