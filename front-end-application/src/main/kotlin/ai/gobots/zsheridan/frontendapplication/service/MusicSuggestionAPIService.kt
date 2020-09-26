@@ -24,7 +24,7 @@ class MusicSuggestionAPIService {
                 playlistByCoordinate(listLocation[0], listLocation[1])
             }
             else -> {
-                throw BusinessException("Number of attributes invalid. Only one city name OR coordinates as 'lat,lon'")
+                throw BusinessException("Number of attributes invalid. Only one city name OR coordinates as 'lat,lon'.")
             }
         }
     }
@@ -44,15 +44,13 @@ class MusicSuggestionAPIService {
         val httpGet = HttpGet("$baseUrl$location")
 
         var playlist = ""
-        try {
+        return try {
             playlist = EntityUtils.toString(client.execute(httpGet).entity, "UTF-8")
             client.close()
+            JsonParser().parse(playlist).asJsonArray
         } catch (e: Exception) {
-            throw BusinessException("Something went wrong. Verify if all servers are up and running. " +
-                    "Message: ${e.message}")
+            throw BusinessException("Something went wrong. Verify if the city or coordinates really exist.")
         }
-
-        return JsonParser().parse(playlist).asJsonArray
     }
 
 }
