@@ -6,21 +6,20 @@ import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.ui.set
 import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestParam
 
-@Controller()
+@Controller
 class FrontController(
         @Autowired
         private val musicSuggestionAPIService: MusicSuggestionAPIService
 ) {
 
-    @GetMapping("/playlist")
+    @GetMapping("/home")
     fun playlist(): String {
         return "index"
     }
 
-    @PostMapping("/playlist")
+    @GetMapping("/playlist")
     fun getPlaylist(@RequestParam location: String, model: Model): String {
 
         model["playlist"] = musicSuggestionAPIService.getPlaylist(location)
