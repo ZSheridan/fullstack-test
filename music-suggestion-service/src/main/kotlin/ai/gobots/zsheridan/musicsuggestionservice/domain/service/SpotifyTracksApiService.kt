@@ -1,6 +1,6 @@
 package ai.gobots.zsheridan.musicsuggestionservice.domain.service
 
-import ai.gobots.zsheridan.musicsuggestionservice.domain.config.APIKEY
+import ai.gobots.zsheridan.musicsuggestionservice.config.APIKEY
 import ai.gobots.zsheridan.musicsuggestionservice.domain.exception.BusinessException
 import ai.gobots.zsheridan.musicsuggestionservice.domain.model.PlaylistGender
 import com.google.gson.JsonParser
@@ -33,7 +33,7 @@ class SpotifyTracksApiService {
         val httpGet = HttpGet("$base$string$sufix")
         httpGet.setHeader("Authorization", "Bearer $spotifyToken")
 
-        var response = ""
+        val response: String
         try {
             response = EntityUtils.toString(client.execute(httpGet).entity, "UTF-8")
             client.close()

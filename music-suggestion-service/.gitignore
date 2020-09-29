@@ -8,7 +8,7 @@ target/
 !**/src/test/**
 /src/test/kotlin
 /build/www/**
-/src/main/kotlin/ai/gobots/zsheridan/musicsuggestionservice/domain/config/APIKEY.kt
+/src/main/kotlin/ai/gobots/zsheridan/musicsuggestionservice/config/APIKEY.kt
 
 ######################
 # Node

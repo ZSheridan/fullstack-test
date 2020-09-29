@@ -1,6 +1,6 @@
 package ai.gobots.zsheridan.musicsuggestionservice.domain.service
 
-import ai.gobots.zsheridan.musicsuggestionservice.domain.config.APIKEY
+import ai.gobots.zsheridan.musicsuggestionservice.config.APIKEY
 import ai.gobots.zsheridan.musicsuggestionservice.domain.exception.BusinessException
 import com.google.gson.JsonParser
 import org.apache.http.client.methods.HttpGet
@@ -22,7 +22,7 @@ class OpenWeatherMapApiService {
         val client = HttpClients.createDefault()
         val httpGet = HttpGet("$baseURL$local$sufix")
 
-        var locationWeather = ""
+        val locationWeather: String
         try {
             locationWeather = EntityUtils.toString(client.execute(httpGet).entity, "UTF-8")
             client.close()

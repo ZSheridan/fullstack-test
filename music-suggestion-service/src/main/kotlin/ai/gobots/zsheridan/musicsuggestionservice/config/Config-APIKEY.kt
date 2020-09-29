@@ -1,4 +1,4 @@
-package ai.gobots.zsheridan.musicsuggestionservice.domain.config
+package ai.gobots.zsheridan.musicsuggestionservice.config
 //This file and class should be renamed to APIKEY and the information below should be filled properly
 class `Config-APIKEY` {
     companion object {
