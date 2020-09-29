@@ -1,5 +1,11 @@
 # Fullstack Test
 
+## Before Execution
+
+ - Before running this project, the file Config-APIKEY.kt inside music-suggestion-service/src/main/kotlin/ai/gobots/zsheridan/musicsuggestionservice/config should be properly managed, according to its instructions.
+ - After that, run the script run.sh inside this folder.
+ - The application should be available at http://localhost:5001/home
+
 ## Context
 
 Gobots wants to create a new service to suggest music to its users. The suggestions will depend on the city and the climate where the user is.
